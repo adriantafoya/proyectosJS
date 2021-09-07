@@ -1,0 +1,331 @@
+*::before, 
+*::after,
+* {
+	box-sizing: border-box;
+}
+
+/* Variables para tema claro */
+[data-theme='claro'] {
+	--bg-fondo: #e6e6e6;
+	--bg-bloques: #fff;
+ 	--txt-color: #333;
+ 	--bg-btn: #1CBDB4;
+ 	--color-placeholder: #555;
+ 	--bg-btn-eliminar: #FB4132;
+ 	--box-shadow-bloques: 0px 2px 10px -2px #00000030;
+ 	--color-tarea-completa: #555;
+ 	--bg-input-editar: #F0F0F0;
+ 	--sombra-iconos: 0px 0px 10px #00000030;
+}
+
+/* Variables para tema oscuro */
+[data-theme='oscuro'] {
+	--bg-fondo: #3a3a3a;
+	--bg-bloques: #1a1a1a;
+ 	--txt-color: #eee;
+ 	--bg-btn: #27A39C;
+ 	--color-placeholder: #ccc;
+ 	--bg-btn-eliminar: #CD2516;
+ 	--box-shadow-bloques: 0px 2px 10px -2px #00000070;
+ 	--color-tarea-completa: #ccc;
+ 	--bg-input-editar: #2a2a2a;
+ 	--sombra-iconos: 0px 0px 10px #00000050;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', 'Lato', sans-serif;
+   color: var(--txt-color);
+}
+body {
+	background-color: var(--bg-fondo);
+}
+input, select, textarea {
+	border: 2px solid transparent;
+}
+button {
+	border: none;
+}
+button:focus, input:focus, select:focus, textarea:focus {
+	outline: none;
+}
+span.material-icons {
+	text-shadow: var(--sombra-iconos);
+}
+
+
+.cont-elementos {
+	height: auto;
+	width: 700px;
+	max-width: 90%;
+	margin: 0 auto;
+}
+.dom__cont-flex {
+	min-height: 100vh;
+	height: auto;
+	padding: 3.5em 0 2em 0;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+
+.header {
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2em;
+}
+.tarea-nueva {
+	height: 45px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	box-shadow: var(--box-shadow-bloques);
+	background-color: var(--bg-bloques);
+	margin-bottom: 1em;
+	border-radius: 10px;
+}
+.tarea-nueva__input {
+	height: 45px;
+	width: calc(100% - 45px);
+	padding: 0 1em;
+	font-size: 16px;
+	background-color: transparent;
+	border: 2px solid transparent;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.tarea-nueva__input::placeholder {
+	color: var(--color-placeholder);
+}
+.tarea-nueva__btn {
+	height: 45px;
+	width: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--bg-btn);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border: 2px solid transparent;
+}
+.tarea-nueva__btn span {
+	font-size: 27px;
+	color: #eee;
+}
+
+.acciones {
+	height: auto;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+.acciones__filtro {
+	height: 45px;
+	width: auto;
+	box-shadow: var(--box-shadow-bloques);
+	margin-right: 1em;
+	position: relative;
+	border-radius: 10px;
+}
+.acciones__filtro::after{
+	height:45px;
+	width: 45px;
+	content:"\025be";
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	right: 0px;	
+	pointer-events: none;
+	color: #eee;
+	font-size: 22px;
+	background-color: var(--bg-btn);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.acciones__filtro__select {
+	height: 45px;
+	width: 100%;
+	font-size: 16px;
+	padding: 0 1em;
+	background-color: var(--bg-bloques);
+	padding-right: calc(1em + 45px);
+	border-radius: 10px;
+	border: 2px solid transparent;
+}
+.acciones__checkbox {
+	display: none;
+}
+.acciones__lbl-checkbox {
+	display: block;
+	height:45px;
+	width: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	background-color: var(--bg-btn);
+	box-shadow: var(--box-shadow-bloques);
+	border: 2px solid transparent;
+}
+.acciones__lbl-checkbox span {
+	color: #eee;
+}
+
+
+.card-tarea {
+	height: 45px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto 1fr auto auto;
+	margin-bottom: 1em;
+	background-color: transparent;
+	box-shadow: var(--box-shadow-bloques);
+	border-radius: 10px;
+}
+.card-tarea__cont-acciones__checkbox {
+	display: none;
+}
+.card-tarea__cont-acciones__checkbox:checked ~ .card-tarea__output {
+	text-decoration: line-through;
+	color: var(--color-tarea-completa);
+}
+.card-tarea__cont-acciones__lbl-completar {
+	display: block;
+	height: 45px;
+	width: 45px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card-tarea__cont-acciones__lbl-completar > span {
+	display: none;
+}
+.card-tarea__cont-acciones__lbl-completar:before {
+	content: '';
+	height: 45px;
+	width: 45px;
+	border: 3px solid var(--bg-btn);
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	box-sizing: border-box;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color: var(--bg-bloques);
+}
+.card-tarea__cont-acciones__checkbox:checked ~ .card-tarea__cont-acciones__lbl-completar:after {
+	content: "";
+	width: 39px;
+	height: 39px;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	background-color: var(--bg-btn);
+	border: 3px solid var(--bg-bloques);
+	box-sizing: border-box;
+	transition: background .35s;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+.card-tarea__cont-acciones__checkbox:checked ~ .card-tarea__cont-acciones__lbl-completar > span {
+	z-index: 100;
+	position: relative;
+	color: #eee;
+	font-size: 28px;
+	display: inline;
+}
+.card-tarea__output {
+	height: 100%;
+	width: 100%;
+	padding: 0 1em;
+	font-size: 18px;
+	background-color: var(--bg-bloques);
+	border: 2px solid var(--bg-bloques);
+}
+.btn-eliminar-tarea, .btn-editar-tarea {
+	height: 45px;
+	width: 45px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid transparent;
+}
+.btn-editar-tarea {
+	background-color: var(--bg-btn);
+}
+.btn-eliminar-tarea {
+	background-color: var(--bg-btn-eliminar);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.btn-eliminar-tarea span, .btn-editar-tarea span {
+	font-size: 27px;
+	color: #eee;
+}
+
+
+
+/*Clase para JS*/
+.eliminar-tarea {
+	animation-name: eliminarTarea;
+	animation-duration: .5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+.completar-tarea {
+	opacity: .9;
+	animation-name: completarTarea;
+	animation-duration: .2s;
+	animation-delay: linear;
+	animation-fill-mode: forwards;
+}
+
+.editar-tarea {
+	animation-name: editarTarea;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-delay: linear;
+	animation-fill-mode: both;
+	border: 1px solid var(--bg-btn-eliminar);
+	transform: border .3s;
+}
+
+/* Animaciones para JS */
+@keyframes eliminarTarea {
+	0% {
+		transform: scale(1.0);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(0);
+		opacity: 0;
+	}
+}
+
+@keyframes completarTarea {
+	0% {
+		transform: scale(1.0);
+	}
+	100% {
+		transform: scale(.94);
+	}
+}
+
+@keyframes editarTarea {
+	0% {
+		background-color: var(--bg-bloques);
+	}
+	50% {
+		background-color: var(--bg-input-editar);
+	}
+	100% {
+		background-color: var(--bg-bloques);
+	}
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow">
+	<title>To do list</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fuentes -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet"> 
+	<!-- Iconos -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body id="body">
+	<div class="cont-elementos dom__cont-flex">
+		<header class="header">
+			<section class="tarea-nueva">
+				<input type="text" id="txt-tarea" class="tarea-nueva__input" autofocus placeholder="Entrar a las clases online...">
+				<button id="btn-crear-tarea" class="tarea-nueva__btn"><span class="material-icons">add</span></button>
+			</section>
+			<section class="acciones">
+				<div class="acciones__filtro">
+					<select id="slc-filtro" class="acciones__filtro__select">
+						<option value="todas">Todas</option>
+						<option value="completadas">Completadas</option>
+						<option value="incompletas">Incompletas</option>
+					</select>
+				</div>
+				<input type="checkbox" id="ckb-tema" class="acciones__checkbox" checked="false">
+				<label for="ckb-tema" class="acciones__lbl-checkbox">
+					<span id="icono-tema" class="material-icons"></span>
+				</label>
+			</section>
+		</header>
+		<main id="main" class="main">
+			<section id="cont-tareas"></section>
+		</main>
+		<footer class="footer">
+			<small>Desarrollado por <a class="link" href="https://github.com/adriantafoya">Adrian TM</a></small>
+		</footer>
+	</div>
+	<script type="text/javascript" src="js/tema.js"></script>
+	<script type="text/javascript" src="js/actividadesAlmacenadas.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

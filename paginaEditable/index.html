@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Colores</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body id="body">
+	<div id="capa-color">
+		<div class="cont-elementos">
+			<main class="main">
+				<article class="bloque">
+					<h1>
+						<span class="circulo-color">
+							<span id="mitad-color"></span>
+							<span id="mitad-color-transparencia"></span>
+						</span> 
+						<span id="color-final"></span>
+					</h1>
+				</article>
+				<article class="bloque">
+					<label for="input-color">Selecciona un color de fondo</label>
+					<div class="contenedor-input">
+						<input type="color" id="input-color">
+						<input type="text" id="txt-color" class="input-txt">
+					</div>
+				</article>
+				<article class="bloque">
+					<label for="input-opacidad">Selecciona la opacidad del color (0% - 100%):</label>
+					<div class="contenedor-input">
+						<input type="range" id="input-opacidad">
+						<input type="text" id="txt-opacidad" class="input-txt">
+					</div>			
+				</article>
+				<article class="bloque">
+					<label for="input-opacidad">URL de la imagen de fondo (jpg, png):</label>
+					<div class="contenedor-input">
+						<input type="text" id="input-url-imagen" placeholder="https://ejemplo.com/imagenEjemplo.jpg">
+					</div>			
+				</article>
+			</main>
+			<footer class="footer">
+				<article class="bloque">
+					<small>Desarrollado por <a href="https://github.com/adriantafoya" class="link">Adrian TM</a></small>		
+				</article>
+			</footer>
+		</div>
+	</div>
+	<!-- JS -->
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
