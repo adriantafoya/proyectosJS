@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Convierte texto a codigo binario</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Montserrat&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header class="header">
-      <span class="encabezado">Texto --> Binario</span>
-    </header>
-    <div class="main">
-      <input type="text" id="txt-entrada" class="input" placeholder="Escribe aqui">
-      <div id="resultado" class="caja-resultado">-- Resultado --</div>
-    </div>
-    <script src="main.js"></script>
-  </body>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="robots" content="noindex, nofollow">
+   <title>Convierte texto a codigo binario</title>
+   <!-- CSS -->
+   <link rel="stylesheet" href="normalize.css">
+   <link rel="stylesheet" href="style.css">
+   <!-- Fuentes -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="cont-elementos">
+      <header class="bloque section">
+         <h1 class="titulo">Convierte texto en codigo binario</h1>
+      </header>
+      <main class="section">
+         <article class="bloque">
+            <h4><label for="txt-entrada">Escribe el texto a convertir:</label></h4>
+            <div class="cont-input">
+               <input type="text" id="txt-entrada" class="input" placeholder="Algo...">
+               <button class="button" id="btn-generar">Generar</button>
+            </div>
+         </article>
+          <article class="bloque">
+            <h4>Resultado en binario:</h4>
+            <div class="resultado" id="resultado"></div>
+         </article>
+      </main>
+      <footer class="bloque section">
+         <small>Desarrollado por <a href="https://github.com/adriantafoya" class="link">Adrian TM</a></small>
+      </footer>
+   </div>
+   <script src="main.js"></script>
+</body>
 </html>
