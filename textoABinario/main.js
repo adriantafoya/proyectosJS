@@ -47,7 +47,7 @@ function verificarBits (bin) {
 			break;
 			case 2: binCorregido = "000000" + bin; 
 			break;
-			case 3: binCorregido = "00000" + bin; 
+			case 3: binCorregido = "00000" + bin;
 			break;
 			case 4: binCorregido = "0000" + bin; 
 			break;

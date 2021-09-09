@@ -1,0 +1,73 @@
+:root {
+	--bg-body: #222;
+	--color-txt: #eee;
+	--font-game: 'Press Start 2P', cursive;
+	--font-mono: 'JetBrains Mono', monospace;
+}
+
+*:after,
+*:before,
+* {
+	box-sizing: border-box;
+	color: var(--color-txt);
+	font-family: var(--font-mono);
+}
+body {
+	background-image: url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1049&w=1920');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.cont-elementos {
+	min-height: 100vh;
+	max-width: 90%;
+	height: auto;
+	width: 600px;
+	margin: auto;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	padding: 1em;
+}
+
+
+.main {
+	padding-top: 10vh;
+}
+.reloj {
+	height: 180px;
+	width: 100%;
+	padding: 2em 1em;
+	background-color: #00000099;
+	border-radius: .2em;
+}
+.reloj h1 {
+	text-align: center;
+	font-size: 2.5em;
+	margin: 0;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.reloj h1 .item {
+	max-height: 100%;
+	display: inline-flex;
+	padding: .7em .35em .4em .35em;
+	background-color: #000;
+	border-radius: .1em;
+	flex-direction: column;
+}
+.reloj h1 .item .indicador {
+	font-size: .3em;
+	margin-top: 1em;
+}
+.reloj h1 .horario {
+	padding: .5em .7em;
+	font-size: .9em;
+	margin-left: .5em;
+}
+
+.footer {
+	padding: 1em 2em;
+	border-radius: .3em;
+	background-color: #00000099;
+}
