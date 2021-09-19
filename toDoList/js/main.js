@@ -14,7 +14,7 @@ const crearTarea = () => {
 }
 
 // Agregar tarea
-const agregarTarea = (texto) => {
+const agregarTarea = (texto) => { 
 	const cardTarea = document.createElement('article'),
 		id = Date.now(),
 		idTarea = "tarea" + id;

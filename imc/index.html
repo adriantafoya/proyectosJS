@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Indice de Masa corporal</title>
+	<!-- Iconos -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Tipografia -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/seccion.css">
+</head>
+<body>
+	<header class="header">
+		<div id="header-cont-flex" class="cont-elementos cont-flex">
+			<a href="index.html" id="link-volver" class="link-volver"><span class="material-icons">arrow_back</span></a>
+			<span id="indicador-header" class="indicador">IMC</span>
+		</div>
+	</header>
+	<main class="main">
+		<div class="cont-elementos">
+			<section class="section-form">
+				<h2 class="titulo">Rellena los siguientes campos con los datos correspondientes</h2>
+				<div class="cont-input">
+					<label for="input-altura" class="label">Altura en metros:</label>
+					<input type="number" id="input-altura" class="input">
+				</div>
+				<div class="cont-input">
+					<span class="label">Peso medido en:</span> 
+
+					<span class="radio-opcion">
+						<input type="radio" name="sistema-peso" id="sistema-kg" class="radio">
+						<label for="sistema-kg" class="label">Kilogramos</label>
+					</span>
+
+					<span class="radio-opcion">
+						<input type="radio" name="sistema-peso" id="sistema-libras" class="radio">
+						<label for="sistema-libras" class="label">Libras</label>
+					</span>
+
+					<input type="number" id="input-peso" class="input" disabled="">
+				</div>
+			</section>
+			<section class="section-acciones">
+				<div class="cont-flex">
+					<button type="button" class="button" id="btn-siguiente" disabled="">
+						Siguiente <span class="material-icons">arrow_forward</span>
+					</button>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="cont-elementos">
+			<small>Desarrollado por <a href="https://github.com/adriantafoya">Adrian TM</a></small>
+		</div>
+	</footer>
+	<!-- JS -->
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

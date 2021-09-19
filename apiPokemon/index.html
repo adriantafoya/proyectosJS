@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pokemon</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Tipografia -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-- Iconos -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+	<div class="dom">
+		<header class="header">
+			<div class="cont-elementos cont-grid">
+				<span class="logo">Pokemon</span>
+				<div class="acciones">
+					<input type="text" id="busqueda" class="input-busqueda" placeholder="Buscar...">
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div id="main" class="cont-elementos cont-flex">
+				<template id="card-template">
+					<article class="card">
+						<div class="card-head">
+							<img src="https://bluuweb.github.io/practicas/img/vue-js.jpg" alt="" id="img" class="img">
+							<h3 class="titulo">
+								<span class="material-icons">person</span>
+								<span id="nombre" class="nombre">Adrian</span>
+								<span class="hp dato-claro"><span id="hp">80</span>hp</span>
+							</h3>
+							<p class="experiencia dato-claro"><span id="experiencia">100</span> exp</p>
+						</div>
+						<div class="card-body">
+							<div class="item">
+								<span class="valor-item">
+									<span class="material-icons">sports_mma</span>
+									<span id="ataque" class="cantidad">321</span>
+								</span>
+								<span class="nombre-item">Ataque</span>
+							</div>
+							<div class="item">
+								<span class="valor-item">
+									<span class="material-icons">shield</span>
+									<span id="defensa" class="cantidad">102</span>
+								</span>
+								<span class="nombre-item">Defensa</span>
+							</div>
+							<div class="item">
+								<span class="valor-item">
+									<span class="material-icons">star</span>
+									<span id="especial" class="cantidad">321</span>
+								</span>
+								<span class="nombre-item">Especial</span>
+							</div>
+						</div>
+					</article>
+				</template>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="cont-elementos cont-flex">
+				<small>Desarrollado por <a href="https://github.com/adriantafoya" class="link">Adrian TM</a>, con la API: <a href="https://pokeapi.co/" class="link">https://pokeapi.co/</a></small>
+			</div>
+		</footer>
+	</div>
+	<!-- JS -->
+	<script type="module" src="js/main.js"></script>
+</body>
+</html>

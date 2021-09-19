@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Indice de Masa corporal</title>
+	<!-- Iconos -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Tipografia -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/seccion.css">
+</head>
+<body>
+	<header class="header">
+		<div id="header-cont-flex" class="cont-elementos cont-flex">
+			<a href="index.html" id="link-volver" class="link-volver"><span class="material-icons">arrow_back</span></a>
+			<span id="indicador-header" class="indicador">Resultado</span>
+		</div>
+	</header>
+	<main class="main">
+		<div class="cont-elementos">
+			<section id="section-resultado" class="section-resultado">
+				<table>
+					<thead>
+						<tr>
+							<th>Indice de masa corporal</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td id="imc"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<thead>
+						<tr>
+							<th>Estado de salud</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td id="estado-salud"></td>
+						</tr>
+					</tbody>
+				</table>
+				<ul class="lista-imc">
+					<li class="titulo"><b id="titulo-tabla-imc">Indice de masa corporal</b></li>
+					<li><b>Delgadez extrema:</b> <span>&lt;18.4</span></li>
+					<li><b>Peso normal:</b> <span>18.5 - 24.9</span></li>
+					<li><b>Sobrepeso:</b> <span>25 - 29.9</span></li>
+					<li><b>Obesidad:</b> <span>30 - 34.9</span></li>
+					<li><b>Obesidad extrema</b> <span>&gt;35</span></li>
+				</ul>
+			</section>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="cont-elementos">
+			<small>Desarrollado por <a href="https://github.com/adriantafoya">Adrian TM</a></small>
+		</div>
+	</footer>
+	<!-- JS -->
+	<script type="text/javascript" src="js/obtener_datos.js"></script>
+</body>
+</html>
