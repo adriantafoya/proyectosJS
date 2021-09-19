@@ -1,5 +1,6 @@
 "use strict";
 
+// const url = "file:///home/adrian/Frontend/proyectosJS/imc/";
 const url = "https://adriantafoya.github.io/proyectosJS/imc/";
 const headerContFlex = document.getElementById('header-cont-flex');
 const linkVolver = document.getElementById('link-volver');
@@ -27,20 +28,20 @@ const calcularIMC = () => {
 	imc = imc.toFixed(2);
 	imc = parseFloat(imc);
 
-	if (imc <= 18.4) {
+	if (imc < 18.5) {
 		estadoSalud = 'Delgadez extrema';
-	} else if (imc >= 18.5 && imc <= 24.5) {
+	} else if (imc >= 18.5 && imc < 25) {
 		estadoSalud = 'Peso normal';
-	} else if (imc >= 25 && imc <= 29.9) {
+	} else if (imc >= 25 && imc < 30) {
 		estadoSalud = 'Sobrepeso';
-	} else if (imc >= 30 && imc <= 34.9) {
+	} else if (imc >= 30 && imc < 35) {
 		estadoSalud = 'Obesidad';
 	} else if (imc >= 35) {
 		estadoSalud = 'Obesidad extrema';
 	}
 
 	localStorage.setItem('imc', `${imc}`);
-	localStorage.setItem('estado-salud', estadoSalud);
+	localStorage.setItem('estado-salud', `${estadoSalud}`);
 	location.href = "resultado.html";
 }
 
