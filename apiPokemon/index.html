@@ -26,9 +26,14 @@
 		</header>
 		<main class="main">
 			<div id="main" class="cont-elementos cont-flex">
+				<div id="contenedorSpinner" class="cont-spinner oculto">
+					<div class="spinner"></div>
+					<h3 id="avisoCartasCargadas" class="dato-claro oculto"><span id="contadorCartasCargadas">0</span>/300 <br> Pokemones cargados</h3>
+				</div>
 				<template id="card-template">
 					<article class="card">
 						<div class="card-head">
+							<span id="id" class="id dato-claro"></span>
 							<img src="https://bluuweb.github.io/practicas/img/vue-js.jpg" alt="" id="img" class="img">
 							<h3 class="titulo">
 								<span class="material-icons">person</span>

@@ -6,7 +6,7 @@ export const buscar = (e) => {
 
 	if (busqueda !== '') {
 		nombrePokemon.forEach((elemento) => {
-			if (elemento.textContent.includes(busqueda)) {
+			if (elemento.textContent.includes(busqueda) === true || elemento.textContent.toLowerCase().includes(busqueda) === true) {
 				elemento.closest('article').style.display = "block";
 			} else {
 				elemento.closest('article').style.display = "none";
