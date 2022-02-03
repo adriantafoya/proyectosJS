@@ -31,8 +31,8 @@ const fetchData = async () => {
    try {
       mostrarSpinner();
 
-      if (localStorage.getItem('data')) {
-         data = JSON.parse(localStorage.getItem('data'));
+      if (localStorage.getItem('data-pokemones')) {
+         data = JSON.parse(localStorage.getItem('data-pokemones'));
       } else {
 
          mostrarCartasCargadas();
@@ -59,7 +59,7 @@ const fetchData = async () => {
             data[indice] = pokemon;
          }
 
-         localStorage.setItem('data', JSON.stringify(data));
+         localStorage.setItem('data-pokemones', JSON.stringify(data));
       }
 
       pintarCard(data);
