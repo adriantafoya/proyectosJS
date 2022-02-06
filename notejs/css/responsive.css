@@ -1,0 +1,10 @@
+@media screen and (max-width: 768px) {
+	aside {
+		width: 100%;
+		border-right: none;
+	}
+
+	main {
+		width: 100%;
+	}
+}

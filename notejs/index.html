@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Note JS</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="cont-limite cont-flex">
+			<button id="btnMenuNotas" class="oculto"><</button>
+			<span class="logo">Note JS</span>
+			<button id="btnNuevaNota" title="Nueva nota">+</button>
+		</div>
+	</header>
+	<div class="contenedor">
+		<aside>
+			<!-- Si, es un section (soluciona inconvenientes al trabajar con css) -->
+			<section id="sectionNotas"></section>
+			<button id="btnEliminarNota" class="oculto">Eliminar</button>
+			<h3 id="tagNoHayNotas" class="oculto">Crea notas y se almacenaran aqui 👇</h3>
+		</aside>
+		<main class="oculto">
+			<input type="text" name="titulo-nota" id="txtTituloNota" placeholder="Titulo" autocomplete="off" spellcheck="false">
+			<textarea name="contenido-nota" id="txtContenidoNota" placeholder="Escribe aqui" spellcheck="false"></textarea>
+		</main>
+	</div>
+		
+	<script src="main.js"></script>
+</body>
+</html>

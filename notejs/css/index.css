@@ -1,0 +1,34 @@
+@import url('header.css');
+@import url('aside.css');
+@import url('main.css');
+@import url('compartidos.css');
+@import url('responsive.css');
+
+* {
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+	color: #f3f3f3;
+}
+*::selection {
+	background-color: #ffffff20;
+	line-height: 1.1;
+}
+
+body {
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	background-color: #242424;
+}
+
+div.cont-limite {
+	height: inherit;
+	max-width: calc(100vw - 30px);
+	margin: auto;
+}
+
+div.contenedor {
+	height: calc(100vh - 60px);
+	width: 100%;
+	display: flex;
+}

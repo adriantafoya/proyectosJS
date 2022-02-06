@@ -1,0 +1,81 @@
+aside {
+	height: 100%;
+	width: 300px;
+	min-width: 300px;
+	border-right: 1px solid #4a4a4a;
+}
+aside.oculto {
+	display: none;
+}
+
+aside > h3#tagNoHayNotas {
+	width: calc(100% - 30px);
+	margin: auto;
+	margin-top: 1.5em;
+	text-align: center;
+	font-weight: 400;
+}
+aside > h3#tagNoHayNotas.oculto {
+	display: none;
+}
+
+aside > section {
+	height: 100%;
+	width: 100%;
+	max-height: 100%;
+	max-width: 100%;
+	white-space: nowrap;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: #242424;
+	padding: 15px;
+}
+aside > section.oculto {
+	display: none;
+}
+
+aside > section > option {
+	min-height: 41px;
+	width: 100%;
+	padding: 10px 10px;
+	font-size: 1em;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	border-radius: .2em;
+	border: 1px solid #4a4a4a;
+	margin-bottom: .5em;
+	box-shadow: 0px 0px 10px #00000040;
+	user-select: none;
+}
+aside > section > option:last-child {
+	margin-bottom: 0;
+}
+aside > section > option:hover {
+	background-color: #ffffff10;
+}
+aside > section > option.seleccionado {
+	background-color: #3C4657;
+}
+
+aside > button#btnEliminarNota {
+	width: auto;
+	position: absolute;
+	z-index: 100;
+	font-size: .78em;
+	font-size: 1em;
+	font-weight: 500;
+	background-color: #DE3733;
+	padding: 7.5px 10px;
+	border-radius: .22em;
+	box-shadow: 0px 1px 15px #00000050;
+}
+aside > button#btnEliminarNota:hover {
+	background-color: #D32622;
+}
+aside > button#btnEliminarNota:active {
+	background-color: #C62420;
+}
+aside > button#btnEliminarNota.oculto {
+	display: none;
+}

@@ -1,0 +1,39 @@
+header {
+	height: 60px;
+	background-color: #181818;
+}
+header > div.cont-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header > div.cont-flex > button#btnMenuNotas,
+header > div.cont-flex > button#btnNuevaNota {
+	height: 37px;
+	aspect-ratio: 1/1;
+	background-color: transparent;
+	color: #fff;
+	font-size: 27px;
+	border-radius: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+header > div.cont-flex > button#btnMenuNotas:hover,
+header > div.cont-flex > button#btnNuevaNota:hover {
+	background-color: #ffffff25;
+	transition: all .12s ease-in;
+}
+header > div.cont-flex > button#btnMenuNotas:active,
+header > div.cont-flex > button#btnNuevaNota:active {
+	background-color: #ffffff38;
+	transition: all .12s ease-in;
+}
+header > div.cont-flex > button#btnMenuNotas.oculto {
+	display: none;
+}
+
+header > div.cont-flex > span.logo {
+	color: #fff;
+	font-size: 20px;
+}

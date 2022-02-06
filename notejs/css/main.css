@@ -1,0 +1,23 @@
+main {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+}
+main.oculto {
+	display: none;
+}
+
+main > input {
+	font-size: 1.18em;
+}
+
+main > textarea {
+	height: 100%;
+	max-width: 100%;
+	resize: none;
+	line-height: 1.25;
+	white-space: pre-wrap;
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-size: 1.05em;
+}
