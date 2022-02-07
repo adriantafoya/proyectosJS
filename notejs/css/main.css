@@ -9,6 +9,7 @@ main.oculto {
 
 main > input {
 	font-size: 1.18em;
+	border-bottom: 1px solid #ccc;
 }
 
 main > textarea {

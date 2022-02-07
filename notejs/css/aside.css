@@ -2,7 +2,8 @@ aside {
 	height: 100%;
 	width: 300px;
 	min-width: 300px;
-	border-right: 1px solid #4a4a4a;
+	border-right: 1px solid #ccc;
+	background-color: #f3f3f3;
 }
 aside.oculto {
 	display: none;
@@ -27,7 +28,6 @@ aside > section {
 	white-space: nowrap;
 	overflow-x: hidden;
 	overflow-y: auto;
-	background-color: #242424;
 	padding: 15px;
 }
 aside > section.oculto {
@@ -43,19 +43,22 @@ aside > section > option {
 	white-space: nowrap;
 	overflow: hidden;
 	border-radius: .2em;
-	border: 1px solid #4a4a4a;
-	margin-bottom: .5em;
-	box-shadow: 0px 0px 10px #00000040;
+	background-color: #111;
+	margin-bottom: .6em;
+	box-shadow: 0px 0px 10px #00000030;
 	user-select: none;
 }
 aside > section > option:last-child {
 	margin-bottom: 0;
 }
 aside > section > option:hover {
-	background-color: #ffffff10;
+	box-shadow: 0px 0px 10px #00000040;
+	transform: scale(1.01);
+	transition: all .1s ease-in;
 }
 aside > section > option.seleccionado {
-	background-color: #3C4657;
+	background-color: #4171C3;
+	transition: all .1s ease-in;
 }
 
 aside > button#btnEliminarNota {

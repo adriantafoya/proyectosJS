@@ -14,12 +14,12 @@ button:focus {
 main > input,
 main > textarea {
 	padding: 15px 20px;
-	color: #eee;
-	background-color: #242424;
+	color: #000;
+	background-color: #f3f3f3;
 }
 main > input::placeholder,
 main > textarea::placeholder {
-	color: #ccc;
+	color: #4a4a4a;
 }
 
 aside > section::-webkit-scrollbar,

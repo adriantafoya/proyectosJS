@@ -1,6 +1,11 @@
 header {
 	height: 60px;
-	background-color: #181818;
+	background-color: #111;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	box-shadow: 0px 0px 10px #00000040;
 }
 header > div.cont-flex {
 	display: flex;
@@ -35,5 +40,6 @@ header > div.cont-flex > button#btnMenuNotas.oculto {
 
 header > div.cont-flex > span.logo {
 	color: #fff;
-	font-size: 20px;
+	font-size: 22px;
+	font-weight: 600;
 }

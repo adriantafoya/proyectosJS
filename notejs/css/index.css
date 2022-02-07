@@ -10,7 +10,7 @@
 	color: #f3f3f3;
 }
 *::selection {
-	background-color: #ffffff20;
+	background-color: #00000020;
 	line-height: 1.1;
 }
 
@@ -18,7 +18,7 @@ body {
 	height: 100vh;
 	padding: 0;
 	margin: 0;
-	background-color: #242424;
+	background-color: #f3f3f3;
 }
 
 div.cont-limite {
