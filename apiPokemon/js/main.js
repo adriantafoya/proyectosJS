@@ -1,7 +1,8 @@
-import { fetchData } from './pintar_api.js';
+import { pintarApi, mostrarSpinner } from './pintar_api.js';
 import { buscar } from './buscador.js';
 
-fetchData();
+mostrarSpinner();
+pintarApi();
 
 document.addEventListener("DOMContentLoaded", () => {
    document.querySelector('#busqueda').addEventListener('keyup', (e) => {

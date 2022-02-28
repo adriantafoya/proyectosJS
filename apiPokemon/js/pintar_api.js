@@ -1,12 +1,9 @@
 "use strict";
+import { data } from './data.js';
 
 const body = document.querySelector('body');
 const contenedorSpinner = document.querySelector('#contenedorSpinner');
-const avisoCartasCargadas = document.querySelector('#avisoCartasCargadas');
-const contadorCartasCargadas = document.querySelector('#contadorCartasCargadas');
-const cantidadPokemones = 300;
-
-let data = {};
+const cantidadPokemones = 898;
 
 function mostrarSpinner() {
    window.scrollTo(0, 0);
@@ -19,58 +16,20 @@ function ocultarSpinner() {
    body.classList.remove('paralizar');
 }
 
-function mostrarCartasCargadas() {
-   avisoCartasCargadas.classList.remove('oculto');
-}
+function pintarApi() {
+   // for (let indice = 1; indice <= 1; indice++) {
+   //    let pokemon = data[indice];
 
-function ocultarCartasCargadas() {
-   avisoCartasCargadas.classList.add('oculto');
-}
+   //    console.log(indice)
+   //    console.log(pokemon)
+   //    pintarCard(pokemon);
+   // }
 
-const fetchData = async () => {
-   try {
-      mostrarSpinner();
+   pintarCard(data);
 
-      if (localStorage.getItem('data-pokemones')) {
-         data = JSON.parse(localStorage.getItem('data-pokemones'));
-      } else {
-
-         mostrarCartasCargadas();
-
-         for (let indice = 1; indice <= cantidadPokemones; indice++) {
-            contadorCartasCargadas.textContent = indice;
-
-            if (indice === cantidadPokemones) {
-               ocultarCartasCargadas();
-            }
-
-            let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${indice}`);
-            let resJSON = await res.json();
-            let pokemon = {
-               imgCvg: resJSON.sprites.other.dream_world.front_default,
-               nombre: resJSON.name,
-               experiencia: resJSON.base_experience,
-               hp: resJSON.stats[0].base_stat,
-               ataque: resJSON.stats[1].base_stat,
-               defensa: resJSON.stats[2].base_stat,
-               especial: resJSON.stats[3].base_stat,
-            };
-
-            data[indice] = pokemon;
-         }
-
-         localStorage.setItem('data-pokemones', JSON.stringify(data));
-      }
-
-      pintarCard(data);
-
-      setTimeout(function() {
-         ocultarSpinner();
-      }, 2200);
-
-   } catch (error) {
-      console.log(error);
-   }
+   setTimeout(function() {
+      ocultarSpinner();
+   }, 1000);
 };
 
 const pintarCard = (data) => {
@@ -78,6 +37,7 @@ const pintarCard = (data) => {
    for (const idPokemon in data) {
 
       let dataPokemon = data[idPokemon];
+
       let main = document.querySelector('#main');
       let template = document.querySelector('#card-template').content;
       let clone = template.cloneNode(true);
@@ -91,7 +51,13 @@ const pintarCard = (data) => {
          clone.querySelector('#id').textContent = idPokemon;
       }
 
-      clone.querySelector('#img').setAttribute('src', `${dataPokemon.imgCvg}`);
+      if (dataPokemon.imgURL) {
+      	clone.querySelector('#img').setAttribute('src', `${dataPokemon.imgURL}`);
+      } else {
+      	clone.querySelector('#img').setAttribute('src', '../img/pokeball.png');
+      }
+
+      clone.querySelector('#img').setAttribute('loading', 'lazy');
       clone.querySelector('#nombre').textContent = dataPokemon.nombre.charAt(0).toUpperCase() + dataPokemon.nombre.slice(1);
       clone.querySelector('#hp').textContent = dataPokemon.hp;
       clone.querySelector('#experiencia').textContent = dataPokemon.experiencia;
@@ -104,4 +70,4 @@ const pintarCard = (data) => {
    }
 }
 
-export { fetchData };
+export { pintarApi, mostrarSpinner };
