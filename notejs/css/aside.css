@@ -15,6 +15,7 @@ aside > h3#tagNoHayNotas {
 	margin-top: 1.5em;
 	text-align: center;
 	font-weight: 400;
+	color: #111;
 }
 aside > h3#tagNoHayNotas.oculto {
 	display: none;
