@@ -1,0 +1,120 @@
+*:after,
+*:before,
+* {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	border: none;
+}
+button:focus {
+	outline: none;
+}
+
+main.galeria {
+	padding: 5px 0;
+	width: 800px;
+	max-width: calc(100% - 10px);
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3px;
+}
+
+main.galeria > img.img-galeria {
+	width: calc((100% - 6px) / 3);
+	aspect-ratio: 1/1;
+	object-fit: cover;
+}
+
+main.galeria > img.img-galeria:hover, 
+main.galeria > img.img-galeria:active {
+	filter: brightness(0.7);
+	transition: all .15s ease-in;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+	main.galeria > img.img-galeria:hover, 
+	main.galeria > img.img-galeria:active {
+		cursor: default;
+	}
+}
+
+section.slider {
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 3px;
+	background-color: #000;
+	display: none;
+}
+section.slider.activo {
+	display: flex;
+}
+
+section.slider > div.cont-btn {
+	width: 100%;
+	display: flex;
+}
+section.slider > div.cont-btn:last-child {
+	justify-content: space-between;
+}
+
+section.slider > div.cont-btn > button.flecha-izquierda,
+section.slider > div.cont-btn > button.flecha-derecha,
+section.slider > div.cont-btn > button.salir {
+	width: calc(50% - 4px);
+	font-size: 18px;
+	font-weight: bolder;
+	padding: .5em 0;
+	background-color: #ffffff15;
+	border: 1px solid #eee;
+	color: #eee;
+	border-radius: 2px;
+}
+
+section.slider > div.cont-btn > button.flecha-izquierda:hover,
+section.slider > div.cont-btn > button.flecha-derecha:hover,
+section.slider > div.cont-btn > button.salir:hover {
+	background-color: #ffffff20;
+	transition: all .12s ease-in;
+}
+
+section.slider > div.cont-btn > button.flecha-izquierda:active,
+section.slider > div.cont-btn > button.flecha-derecha:active,
+section.slider > div.cont-btn > button.salir:active {
+	background-color: #ffffff25;
+	transition: all .12s ease-in;
+}
+
+section.slider > div.cont-btn > button.salir {
+	width: 100%;
+}
+
+section.slider > article.cont-img {
+	max-height: 100%;
+	max-width: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+section.slider > article.cont-img > img {
+	max-height: 100%;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	margin: .5em 0;
+}
