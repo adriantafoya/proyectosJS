@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Phrases about Chuck Norris</title>
+	<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Work+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<dialog id="modal">
+		<h2>Successfully copied 👌</h2>
+		<button id="btn-cerrar-modal">Accept</button>
+	</dialog>
+	<header>
+		<div class="cont-limite">
+			<!-- El header debe ser grande con un fondo morado moderno, al final del titulo incluir una imagen/icono de chuck norris -->
+			<span class="titulo">Phrases about Chuck Norris</span>
+			<img src="img/chuck-norris-icon.jpeg" alt="Chuck Norris animated" class="icono">
+		</div>
+	</header>
+	<main>
+		<div class="cont-limite">
+			<h2 class="frase">
+				<span class="comillas"><i>"</i></span>
+				<span id="txt-frase" class="contenido">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span><span class="comillas"><i>"</i></span>
+				<br><br>
+				<span class="autor">- Things chuck norris never did</span>
+			</h2>
+			<div class="cont-btn-acciones">
+				<label for="slc-categoria">Category</label>
+				<div class="cont-select">
+					<select id="slc-categoria" class="select-categoria">
+						<option value="animal">Animal</option>
+						<option value="celebrity">Celebrity</option>
+						<option value="money">Money</option>
+						<option value="dev">Dev</option>
+						<option value="religion">Religion</option>
+						<option value="science">Science</option>
+						<option value="career">Career</option>
+						<!-- 😐 -->
+						<!-- <option value="explicit">Explicit</option> -->
+						<option value="fashion">Fashion</option>
+						<option value="food">Food</option>
+						<option value="history">History</option>
+						<option value="movie">Movie</option>
+						<option value="music">Music</option>
+						<option value="political">Political</option>
+						<option value="sport">Sport</option>
+						<option value="travel">Travel</option>
+					</select>
+				</div>
+				<!-- Con este boton se copia la frase al portapeles del dispositivo -->
+				<!-- Debe poner un aviso de que se copio con exito ya se una palomita o modal (dialog html) -->
+				<button id="btn-copiar-texto" translate="no">Copy</button>
+
+				<!-- Debe de hacer una nueva peticion a la api, con la categoria que este selecionada -->
+				<!-- Osea sera una variable -->
+				<button id="btn-refrescar">Refresh</button>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="cont-limite">
+			<small>
+				Creado por <a href="https://github.com/adriantafoya" class="link">Adrian TM</a>, con la api de <a href="https://chucknorris.io" class="link">chucknorris.io</a>.
+			</small>
+		</div>
+	</footer>
+
+	<!-- JS -->
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
