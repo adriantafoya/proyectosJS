@@ -1,5 +1,5 @@
 "use strict";
 
-const holaMundo = "Seguimiento externo";
+const txtNombreActividad = document.querySelector("#txt-nombre-actividad");
+const formulario = document.querySelector('#form');
 
-console.log(holaMundo);
