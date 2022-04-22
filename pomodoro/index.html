@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de tiempo | Pomodoro</title>
+    <link rel="icon" type="image/png" href="img/reloj-de-arena.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/modales.css">
+</head>
+<body data-theme="oscuro">
+    <section id="modal" class="section-modal">
+        <article class="modal modal-ajustes">
+            <div class="modal__div-title">
+                <span id="span-title-modal" class="modal__div-title__txt">Titulo del modal</span>
+                <button id="btn-cerrar-modal" class="modal__div-title__btn button button--cerrar-modal"><i class="fi fi-rr-cross uicon"></i></button>
+            </div>
+            <div id="div-contenido-modal" class="modal__div-contenido">Contenido</div>
+        </article>
+    </section>
+    <header class="header">
+        <div class="div-cont-elementos">
+            <span class="header__titulo">Pomodoro</span>
+            <nav class="header__nav">
+                <button id="btn-ajustes" class="button button--nav"><i class="fi fi-rr-settings uicon"></i></button>
+                <button id="btn-informacion" class="button button--nav"><i class="fi fi-rr-info uicon"></i></button>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="div-cont-elementos">
+            <section class="main__temporizador-section">
+                <span id="span-temporizador" class="main__temporizador-section__span">00:00</span>
+            </section>
+            <section class="main__indicadores-section">
+                <!-- Indica si es Trabajando, Pequeño descanso, Descanso largo -->
+                <span id="span-proceso" class="indicador">Inactividad</span>
+                <div class="progress-bar">
+                    <!-- Aqui indica el trabajo y el decanso, seran barras de progreso que aumentaran dinamicamente -->
+                    <!-- El width de cada barra dependel porcentaje de tiempo que ocupe en el ciclo -->
+                    <div id="progress-bar-1" class="progress-bar__fr"></div>
+                    <div id="progress-bar-2" class="progress-bar__fr"></div>
+                </div>
+                <span class="indicador indicador--pequeno">Ciclo&nbsp<span id="span-ciclo">0</span>&nbsp;de 4</span>
+            </section>
+            <section class="main__acciones-section">
+                <button id="btn-iniciar" class="button button--monospace"><i class="fi fi-rr-play uicon"></i></button>
+                <button id="btn-reiniciar" class="button button--monospace button--d-n"><i class="fi fi-rr-rotate-right uicon"></i></button>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="div-cont-elementos">
+            <small>Creado por <a href="https://github.com/adriantafoya" class="link">Adrian Tafoya</a></small>
+        </div>
+    </footer>
+    <!-- JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/ajustes.js"></script>
+    <script type="text/javascript" src="js/temporizador.js"></script>
+    <script type="text/javascript" src="js/mostrar_informacion.js"></script>
+</body>
+</html>
