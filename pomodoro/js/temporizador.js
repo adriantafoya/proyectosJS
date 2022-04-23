@@ -40,7 +40,7 @@ function mostrarNotificacion(proceso, tiempo) {
 	if (Notification.permission === 'granted') {
 		if (proceso === "trabajo") {
 			titulo = "Es hora de trabajar";
-			opciones.body = `Es hora de trabar durante ${tiempo}`;
+			opciones.body = `Es hora de trabajar durante ${tiempo}`;
 			opciones.icon = "../img/trabajando.png";
 		} else if (proceso === "descansoCorto") {
 			titulo = "Es hora de un descanso corto";
